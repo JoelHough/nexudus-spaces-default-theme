@@ -100,10 +100,16 @@
         
         <!-- wellcome_block -->
         <div class="wellcome_block span3">
+          <a href="{% Url Events, Index %}"><span aria-hidden="true" class="icon i-32 icon-calendar circle orange"></span></a>
+          <h3 class="subheader">{% T Coming up %}</h3>
+          <p>{% T See what's happening at {0}. || data.Business.Name %}</p>
+          <a href="{% Url Events, Index %}" class="btn btn-orange"><span aria-hidden="true" class="icon i-16 icon-calendar"></span>{% T Calendar %}</a>
+          <!--
           <a href="{% Url Bookings, Index %}"><span aria-hidden="true" class="icon i-32 icon-calendar circle orange"></span></a>
           <h3 class="subheader">{% T What's on %}</h3>
           <p>{% T Activities and events at {0}. Make your own booking request. || data.Business.Name %}</p>
           <a href="{% Url Bookings, Index %}" class="btn btn-orange"><span aria-hidden="true" class="icon i-16 icon-calendar"></span>{% T Calendar %}</a>
+          -->
         </div>
         <!-- END wellcome_block -->
         
@@ -159,7 +165,10 @@
 		  {% endif %}
         </h3>
         <a href="{% Url Contact, Index %}" class="btn btn-orange btn-large">{% T Contact %}</a>
+        <!--
         <a href="{% Url Bookings, Index %}" class="btn btn-orange btn-large">{% T Make a booking %}</a>
+        -->
+        <a href="{% Url SignUp, Index %}" class="btn btn-orange btn-large">{% T Sign up %}</a>
       </div>
     </div>
     <!-- END CONTAINER -->
